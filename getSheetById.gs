@@ -1,25 +1,24 @@
-function getSheetById(sheet_id) {
+function getSheetById(sheet_id){
 
-  // workbook
-
+  // access wb
    var wb = SpreadsheetApp.getActiveSpreadsheet();
 
-  // access
+  // access all sheet
+   var sheets = wb.getSheets();
 
-  var sheets = wb.getSheets();
+  // loop variables
+    for(i in sheets) {
+     // if sheet id matches the sheets argument
+     if(sheets[i].getSheetId() == sheet_id) {
+        // store sheet name
+         var sheetName = sheets[i].getSheetName();
+     }
 
-  // loop 
 
-  for ( i in sheets) {
-    // if the sheet id matches the sheet argument
-    if(sheets[i].getSheetId() == sheet_id) {
-      // store sheet name
-      var sheetName = sheets[i].getSheetName();
-
-    }
   }
 
-  // return 
-  return wb.getSheetByName(sheetName);
+  // return the wb and sheet name
+    return wb.getSheetByName(sheetName);
+
 
 }
