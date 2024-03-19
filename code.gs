@@ -1,7 +1,7 @@
 function main() {
 
 // access
-var formResponses = getSheetById(1069665103);
+var formResponses = getSheetById(yourID);
 
 // collect data
 var formData = formResponses.getRange(1, 1, formResponses.getLastRow(), formResponses.getLastColumn()) .getDisplayValue();
