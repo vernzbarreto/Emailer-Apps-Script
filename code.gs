@@ -17,7 +17,7 @@ var formQuestions = formResponses.getRange(1, 2, 1, formResponses.getLastColumn(
  
 
  //template
- var htmlTemplate = HtmlService.createTemplateFromFile('email')
+ var htmlTemplate = HtmlService.createTemplateFromFile('email');
 
  //define html variables questions
  htmlTemplate.questionOne = formQuestions [0][0];
